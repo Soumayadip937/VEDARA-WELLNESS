@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Vedara Wellness — premium spa and wellness experiences for hotels, resorts and their guests.">
+<title>Vedara Wellness | Hospitality Understanding. Wellness Expertise.</title>
+<style>
+:root{
+  --ink:#24312c; --muted:#66736d; --cream:#f7f3eb; --sand:#e8ddca;
+  --sage:#aab8a5; --deep:#34483f; --white:#fff; --line:#d9d5cb;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Georgia,"Times New Roman",serif;color:var(--ink);background:var(--cream);line-height:1.6}
+.nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(247,243,235,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(36,49,44,.08)}
+.nav-inner{max-width:1180px;margin:auto;height:76px;display:flex;align-items:center;justify-content:space-between;padding:0 24px}
+.logo{font-size:25px;letter-spacing:4px;font-weight:600}.logo small{display:block;font:10px Arial,sans-serif;letter-spacing:3px;text-align:center;margin-top:-4px}
+.nav a{color:var(--ink);text-decoration:none;font:13px Arial,sans-serif;margin-left:25px}
+.btn{display:inline-block;padding:13px 22px;border-radius:30px;background:var(--deep);color:#fff!important}
+.hero{min-height:100vh;padding:145px 24px 90px;display:grid;place-items:center;position:relative;overflow:hidden;background:
+ radial-gradient(circle at 78% 35%,rgba(170,184,165,.55),transparent 28%),
+ radial-gradient(circle at 18% 70%,rgba(232,221,202,.9),transparent 32%),
+ var(--cream)}
+.hero-inner{max-width:1180px;width:100%;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.eyebrow{font:11px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+h1{font-size:clamp(52px,7vw,92px);font-weight:400;line-height:.98;letter-spacing:-3px}
+.hero p{font-size:19px;max-width:600px;margin:28px 0;color:#59645f}
+.actions{display:flex;gap:14px;flex-wrap:wrap}
+.outline{display:inline-block;padding:12px 22px;border:1px solid var(--deep);border-radius:30px;color:var(--deep);text-decoration:none}
+.orb{width:min(430px,80vw);aspect-ratio:1;border-radius:50% 50% 45% 55%;background:linear-gradient(145deg,#dfe4d9,#9cac99);box-shadow:35px 35px 0 rgba(52,72,63,.08);transform:rotate(-8deg);position:relative}
+.orb:before,.orb:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.55);border-radius:50%}
+.orb:before{inset:13%;}.orb:after{inset:25%}
+.section{padding:100px 24px}.wrap{max-width:1180px;margin:auto}
+.section-head{max-width:720px;margin-bottom:48px}.section-head h2{font-size:46px;font-weight:400;line-height:1.08;margin:10px 0 16px}.section-head p{color:var(--muted);font-size:17px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start}
+.story-card{background:#fff;padding:42px;border-radius:4px;box-shadow:0 18px 50px rgba(36,49,44,.06)}
+.story-card h3{font-size:25px;font-weight:400;margin-bottom:15px}.story-card p{color:var(--muted)}
+.expertise{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+.expertise div{padding:22px;border:1px solid var(--line);background:rgba(255,255,255,.35)}
+.expertise strong{display:block;font-size:15px;margin-bottom:5px}.expertise span{font:13px Arial,sans-serif;color:var(--muted)}
+.dark{background:var(--deep);color:white}.dark .section-head p{color:#d2d9d4}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{padding:30px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);min-height:180px}
+.card span{font:10px Arial,sans-serif;letter-spacing:2px;color:#cbd5cf}.card h3{font-size:24px;font-weight:400;margin:12px 0}.card p{font:14px Arial,sans-serif;color:#d5ddd8}
+.services{background:#fff}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.service{background:#fff;padding:27px;min-height:165px}.service h3{font-size:22px;font-weight:400;margin-bottom:8px}.service p{font:13px Arial,sans-serif;color:var(--muted)}
+.process{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}.step{border-top:1px solid var(--deep);padding-top:17px}.num{font:11px Arial,sans-serif;letter-spacing:2px;color:var(--muted)}.step h3{font-size:20px;font-weight:400;margin:10px 0}.step p{font:13px Arial,sans-serif;color:var(--muted)}
+.quote{padding:85px 30px;text-align:center;background:var(--sand)}.quote blockquote{font-size:38px;line-height:1.2;max-width:850px;margin:auto;font-weight:400}.quote p{font:11px Arial,sans-serif;letter-spacing:3px;text-transform:uppercase;margin-top:22px;color:var(--muted)}
+.contact{background:#24312c;color:#fff}.contact .section-head p{color:#d2d9d4}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact-box{border-top:1px solid rgba(255,255,255,.25);padding-top:25px}.contact-box h3{font-weight:400;font-size:25px}.contact-box p{font:14px Arial,sans-serif;color:#d2d9d4;margin-top:7px}
+footer{background:#1d2925;color:#bfc9c3;padding:25px 24px;font:11px Arial,sans-serif}.footer-inner{max-width:1180px;margin:auto;display:flex;justify-content:space-between}
+@media(max-width:850px){
+ .nav-links{display:none}.hero-inner,.split,.contact-grid{grid-template-columns:1fr}.hero{padding-top:125px}.orb{margin:auto}.cards,.service-grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.section{padding:75px 20px}
+}
+@media(max-width:520px){h1{font-size:52px}.section-head h2{font-size:37px}.cards,.service-grid,.expertise,.process{grid-template-columns:1fr}.nav-inner{padding:0 16px}.logo{font-size:21px}.hero p{font-size:17px}}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">VEDARA<small>WELLNESS</small></div>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#services">Services</a><a href="#partnership">Partnership</a><a href="#contact" class="btn">Partner With Us</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="eyebrow">Hotel Spa & Wellness</div>
+      <h1>Wellness,<br>thoughtfully<br>delivered.</h1>
+      <p>Premium spa experiences created for modern hospitality — combining hotel-industry understanding with experienced wellness professionals.</p>
+      <div class="actions">
+        <a class="btn" href="#partnership">Hotel Partnership</a>
+        <a class="outline" href="#services">Explore Services</a>
+      </div>
+    </div>
+    <div class="orb" aria-label="Vedara Wellness visual"></div>
+  </div>
+</header>
+
+<section class="section" id="about">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">About Vedara</div>
+      <h2>Hospitality understanding. Wellness expertise.</h2>
+      <p>Vedara Wellness is built to operate as a professional wellness partner within hotels and resorts, creating a calm, refined and consistent guest experience.</p>
+    </div>
+    <div class="split">
+      <div>
+        <p style="font-size:18px;color:#59645f">Our approach combines experienced spa professionals with strong understanding of hotel operations, financial discipline and guest-service expectations.</p>
+        <div class="expertise">
+          <div><strong>Hotel Industry Expertise</strong><span>Almost 8 years of hospitality experience, with focus on financial and operational understanding.</span></div>
+          <div><strong>Spa Industry Expertise</strong><span>An experienced team with approximately 10 years of hands-on spa and massage experience.</span></div>
+        </div>
+      </div>
+      <div class="story-card">
+        <h3>Our vision</h3>
+        <p>To become a trusted wellness partner for leading hotels and resorts, creating exceptional spa experiences that become an integral part of modern hospitality.</p>
+        <h3 style="margin-top:30px">Our mission</h3>
+        <p>To deliver professional, guest-centric wellness experiences while creating a sustainable and mutually beneficial partnership for the hotel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section dark" id="partnership">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">For Hotel Partners</div>
+      <h2>A spa that adds value to your property.</h2>
+      <p>Vedara is designed to work as an extension of the hotel's guest experience — not simply as an external business operating inside the property.</p>
+    </div>
+    <div class="cards">
+      <div class="card"><span>01 / REVENUE</span><h3>Additional Revenue</h3><p>Monetize an appropriate hotel space through a professionally managed wellness operation.</p></div>
+      <div class="card"><span>02 / EXPERIENCE</span><h3>Guest Experience</h3><p>Add a premium wellness amenity that complements accommodation, dining and leisure.</p></div>
+      <div class="card"><span>03 / MANAGEMENT</span><h3>Lower Burden</h3><p>Vedara can support recruitment, training, treatment operations, products and day-to-day spa management.</p></div>
+      <div class="card"><span>04 / CONTROL</span><h3>Transparency</h3><p>Structured reporting can cover revenue, treatment sales, productivity, consumables and guest feedback.</p></div>
+      <div class="card"><span>05 / STANDARDS</span><h3>Hotel-Compatible SOPs</h3><p>Professional grooming, hygiene, guest privacy, conduct and service standards aligned with the property.</p></div>
+      <div class="card"><span>06 / GROWTH</span><h3>Long-Term Partnership</h3><p>A flexible operating model designed around the hotel's positioning, guest profile and commercial objectives.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section services" id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Wellness Menu</div>
+      <h2>Experiences designed for relaxation, recovery and renewal.</h2>
+      <p>Our service portfolio is designed for hotel guests seeking everything from a short express treatment to a complete wellness ritual.</p>
+    </div>
+    <div class="service-grid">
+      <div class="service"><h3>Aroma De-Stressing</h3><p>A soothing aromatherapy-based experience designed around relaxation and release of everyday tension.</p></div>
+      <div class="service"><h3>Swedish Massage</h3><p>A classic relaxing full-body massage using flowing techniques.</p></div>
+      <div class="service"><h3>Thai Massage</h3><p>A dry treatment combining pressure techniques and assisted stretching.</p></div>
+      <div class="service"><h3>Vedara Signature</h3><p>A signature combination experience blending massage and stretching techniques.</p></div>
+      <div class="service"><h3>Sports Therapy</h3><p>Deeper bodywork focused on active guests and muscular tightness.</p></div>
+      <div class="service"><h3>Balinese Massage</h3><p>A holistic experience incorporating massage, stretching and acupressure-inspired techniques.</p></div>
+      <div class="service"><h3>Jet Lag Recovery</h3><p>A focused treatment created for guests recovering from long-distance travel.</p></div>
+      <div class="service"><h3>Express Therapies</h3><p>Indian head massage, neck & back, head & shoulder and foot reflexology.</p></div>
+      <div class="service"><h3>Ayurveda-Inspired</h3><p>Abhyanga, herbal pouch and spice poultice-inspired wellness experiences.</p></div>
+      <div class="service"><h3>Skin Refinements</h3><p>Rice & oatmeal, coffee, and cocoa & vanilla body polishing experiences.</p></div>
+      <div class="service"><h3>Body Envelopments</h3><p>Chocolate, cocoa & vanilla, clay and mud body-wrap experiences.</p></div>
+      <div class="service"><h3>Face Therapies</h3><p>Anti-aging, de-tanning, acne/oil, brightening and cold facial experiences.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">The Vedara Experience</div>
+      <h2>From welcome to goodbye, every detail matters.</h2>
+    </div>
+    <div class="process">
+      <div class="step"><div class="num">01</div><h3>Welcome</h3><p>A warm, professional introduction to the wellness experience.</p></div>
+      <div class="step"><div class="num">02</div><h3>Consultation</h3><p>Understanding the guest's preferences and treatment requirements.</p></div>
+      <div class="step"><div class="num">03</div><h3>Treatment</h3><p>Professional delivery following defined service standards.</p></div>
+      <div class="step"><div class="num">04</div><h3>Relaxation</h3><p>A considered ambience and hospitality journey around the treatment.</p></div>
+      <div class="step"><div class="num">05</div><h3>Feedback</h3><p>Guest feedback supports continuous service improvement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <blockquote>“Your guests should leave feeling better than when they arrived.”</blockquote>
+  <p>The Vedara commitment</p>
+</section>
+
+<section class="section contact" id="contact">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Let's Partner</div>
+      <h2>Create a wellness experience with Vedara.</h2>
+      <p>We are looking to partner with hotels and resorts seeking a professionally managed spa and wellness offering.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-box"><h3>Hotel Partnerships</h3><p>Discuss your property, available space, guest profile and preferred partnership model.</p></div>
+      <div class="contact-box"><h3>Contact Vedara Wellness</h3><p>Phone: [Add number]</p><p>Email: [Add email]</p><p>Location: [Add location]</p></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner"><span>© 2026 Vedara Wellness</span><span>Hospitality Understanding. Wellness Expertise.</span></div>
+</footer>
+</body>
+</html>
